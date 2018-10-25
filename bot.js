@@ -48,7 +48,11 @@ client.on('ready', () => {
   console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
 });
  
- 
+ client.on('ready', () => { //playing
+    client.user.setGame(`1play`,'https://www.twitch.tv/clo_wiin');
+    client.user.setStatus('Online')
+});
+
 client.on('disconnect', () => console.log('I just disconnected, making sure you know, I will reconnect now...'));
  
 client.on('reconnecting', () => console.log('I am reconnecting now!'));
